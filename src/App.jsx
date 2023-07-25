@@ -4,28 +4,23 @@ import toast, { Toaster } from 'react-hot-toast';
 
 
 export default function App() {
-    const [token,setToken]=useState()
-    const [code,setCode]=useState()
-    useEffect(()=>{
-       
-        const getToken=async()=>{
-            // const urlParams = new URLSearchParams(window.location.search);
-            // const code = urlParams.get('code');
-            // console.log(typeof(code),"ccc")
-            // const strippedCode= code.replace(/"/g, '');
-            // console.log(strippedCode)
+  const [token,setToken]=useState()
+  const [code,setCode]=useState()
+  useEffect(()=>{
+     
+      const getToken=async()=>{
 
-            const res= await api.getDropBoxToken()
-            console.log(res,"ttt")
-   
-            setToken(res.data.jsonData)
-            toast("Add cloud surf to chrome")
-        }
-        getToken()
+          const res= await api.getGoogleToken()
+          console.log(res,"ttt")
+ 
+          setToken(res?.data?.jsonData)
+          toast("Add cloud surf to chrome")
+      }
+      getToken()
 
-    
+  
 
-    },[])
+  },[])
 
     var extensionId = "djlioeojdhnojicpfibpofkanhpemdji";
 
