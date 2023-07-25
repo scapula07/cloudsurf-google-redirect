@@ -28,7 +28,7 @@ export default function App() {
    
     const open=()=>{
         console.log("sending")
-        chrome.runtime?.sendMessage(extensionId,{type:"dropbox",token:token
+        chrome.runtime?.sendMessage(extensionId,{type:"google",token:token
            },
             function(response) {
                 console.log(response,"response")
