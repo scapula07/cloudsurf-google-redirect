@@ -22,7 +22,7 @@ export default function App() {
 
   },[])
 
-    var extensionId = "djlioeojdhnojicpfibpofkanhpemdji";
+    var extensionId = "kkbaopbiopmfapafaopfghkfhoadlame";
 
     // Make a simple request:
    
